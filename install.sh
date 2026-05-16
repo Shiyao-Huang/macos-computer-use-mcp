@@ -3,7 +3,7 @@
 # macOS Computer Use MCP Server - One-line Installer
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/Zooeyii/macos-computer-use-mcp/main/install.sh | bash
+#   curl -sfL https://raw.githubusercontent.com/Shiyao-Huang/macos-computer-use-mcp/main/install.sh | bash
 #
 
 set -e
@@ -54,7 +54,7 @@ if [[ -d "$INSTALL_DIR" ]]; then
     git pull || true
 else
     log_info "Cloning repository..."
-    git clone https://github.com/Zooeyii/macos-computer-use-mcp.git "$INSTALL_DIR"
+    git clone https://github.com/Shiyao-Huang/macos-computer-use-mcp.git "$INSTALL_DIR"
     cd "$INSTALL_DIR"
 fi
 

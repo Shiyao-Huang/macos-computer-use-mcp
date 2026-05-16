@@ -61,14 +61,18 @@ The MCP server process communicates over stdio, so any agent can spawn it as a s
 
 ## Installation
 
+One-line install — the easiest way to get started:
+
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Zooeyii/macos-computer-use-mcp/main/install.sh | bash
+curl -sfL https://raw.githubusercontent.com/Shiyao-Huang/macos-computer-use-mcp/main/install.sh | bash
 ```
+
+That's it. The script clones the repo, installs dependencies, builds the server, and prints the MCP config snippet you can paste into your client.
 
 Or manually:
 
 ```bash
-git clone https://github.com/Zooeyii/macos-computer-use-mcp.git ~/.local/share/macos-computer-use-mcp
+git clone https://github.com/Shiyao-Huang/macos-computer-use-mcp.git ~/.local/share/macos-computer-use-mcp
 cd ~/.local/share/macos-computer-use-mcp
 npm install
 npm run build
