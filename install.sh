@@ -60,11 +60,17 @@ fi
 
 # Install dependencies
 log_step "Installing dependencies..."
+rm -rf node_modules package-lock.json
 npm install
 
 # Build
 log_step "Building..."
-npm run build
+if ! npm run build 2>/dev/null; then
+    log_warn "Build failed, retrying with clean install (npm optional dependency bug)..."
+    rm -rf node_modules package-lock.json
+    npm install
+    npm run build
+fi
 
 # Verify
 if [[ ! -f "dist/cli.js" ]]; then
